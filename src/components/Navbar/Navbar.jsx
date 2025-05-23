@@ -9,10 +9,13 @@ const SidebarSocial = () => {
   return (
     <>
       {/* Top Navbar */}
-      <nav className='w-full px-6 py-4 flex justify-between items-center text-white z-50 relative'>
-        <h1 className='text-2xl font-bold text-lightOrange'>
+      <nav className='w-full px-6 py-10 flex justify-between items-center text-white z-50 relative'>
+        <motion.h1
+              initial ={{opacity: 0, y: -100}}
+              animate = {{opacity: 1, y: 0}}
+              transition={{type: "spring", stiffness: 100, damping: 10, delay: 1}} className='text-2xl font-bold text-lightOrange'>
           COFFEE<span className='text-white'>NATION</span>
-        </h1>
+        </motion.h1>
         <button onClick={toggleMenu} className='text-2xl z-50'>
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -22,8 +25,8 @@ const SidebarSocial = () => {
         {isOpen && (
           <>
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.6 }}
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 0.6, y: 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="fixed inset-0 bg-black z-40"
