@@ -23,13 +23,6 @@
 
 ---
 
-## 📸 Preview
-
-![image](https://github.com/user-attachments/assets/a2550b49-f841-468c-aad8-45f922a3b1a9)
-
-
----
-
 ## 🧑‍💻 Getting Started
 
 Clone the repo and run the development server:
